@@ -18,6 +18,9 @@ class Player:
     def get_gift_to_offer(self):
         return self.__giftToOffer;
 
+    def is_in_couple(self):
+        return self.__link != None;
+
     def get_gift_to_receive(self):
         return self.__giftToReceive;
 

@@ -11,15 +11,25 @@ class SecretSanta:
      __players:Player;
      def __init__(self,players:Player):
         self.__players=players;
-    
+     
+     def checkStartCondition(self):
+        cptCouple=0;
+        for p in self.__players:
+           if(p.is_in_couple()):
+              cptCouple+=1
+        if(len(self.__players)<2):
+           print("Le jeu ne peu pas fonctionner avec un nombre de joueurs inferieur à 3")
+           return False;
+        if (cptCouple/2==1 and len(self.__players)==3):
+           print("Le jeu ne peu pas fonctionner avec un couple et 3 joueurs")
+           return False;
+        return True;
      def start(self):
-        if(len(self.__players)>2):
+        if(self.checkStartCondition()):
            shuffle(self.__players)
            self.__players= sorted(self.__players,  key=lambda employee:employee.couple,reverse=True)   
            self.searchPlayerForGift();
            self.printResult();
-        else:
-           print("Le jeu ne peu pas fonctionner avec un nombre de joueurs inferieur à 3")
      
      def printResult(self):
         print("------ TIRAGE ------")
