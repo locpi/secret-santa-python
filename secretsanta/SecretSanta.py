@@ -1,6 +1,8 @@
 
 
 
+from operator import attrgetter
+from random import shuffle
 from secretsanta.Gift import Gift
 from secretsanta.Player import Player
 
@@ -12,6 +14,8 @@ class SecretSanta:
     
      def start(self):
         if(len(self.__players)>2):
+           shuffle(self.__players)
+           self.__players= sorted(self.__players,  key=lambda employee:employee.couple,reverse=True)   
            self.searchPlayerForGift();
            self.printResult();
         else:
