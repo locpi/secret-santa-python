@@ -20,11 +20,13 @@ class SecretSanta:
            self.printResult();
         else:
            print("Le jeu ne peu pas fonctionner avec un nombre de joueurs inferieur à 3")
+     
      def printResult(self):
         print("------ TIRAGE ------")
         for player in self.__players:
            print(player.get_name()+" --> "+player.get_gift_to_offer().getPlayerReceive().get_name())
         print("-----------")
+     
      def getNextPlayer(self,actual):
          total=len(self.__players);
          index = self.__players.index(actual)

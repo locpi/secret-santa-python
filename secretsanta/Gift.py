@@ -6,6 +6,7 @@ from secretsanta import Player
 class Gift:
     __playerOffer:Player;
     __playerReceive:Player;
+    
     def __init__(self, playerOffer:Player,playerReceive:Player):
         self.__playerOffer=playerOffer
         self.__playerReceive=playerReceive
@@ -23,7 +24,7 @@ class Gift:
             return False;
         if(self.isSamePlayer()):
             return False;
-        if(self.__playerOffer.isLinkToAnotherPlayer(self.__playerReceive)):
+        if(self.__playerOffer.isCoupleWith(self.__playerReceive)):
             return False;
         return True;
 

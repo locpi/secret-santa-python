@@ -25,8 +25,7 @@ class Player:
         self.__link=player
         self.couple=True;
 
-
-    def isLinkToAnotherPlayer(self,player):
+    def isCoupleWith(self,player):
         if self.__link != None:
             return self.__link.get_name()==player.get_name()
         return False;
