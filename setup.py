@@ -1,17 +1,10 @@
-# -*- coding: utf-8 -*-
-
-# Learn more: https://github.com/kennethreitz/setup.py
-
+import os
 from setuptools import setup
 
-
-
 setup(
-    name='sample',
-    version='0.1.0',
-    description='Sample package for Python-Guide.org',
-    author='Kenneth Reitz',
-    author_email='me@kennethreitz.com',
-    url='https://github.com/kennethreitz/samplemod',
-    packages=['sample']
+    name = "secret santa",
+    version = "0.0.1",
+    author = "Loïc Pinço",
+    license = "GNU",
+    packages=['secretsanta', 'tests'],
 )

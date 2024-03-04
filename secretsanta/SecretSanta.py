@@ -1,6 +1,9 @@
-import Player
-from Gift import Gift 
-from Player import Player 
+
+
+
+from secretsanta.Gift import Gift
+from secretsanta.Player import Player
+
 
 class SecretSanta:
      __players:Player;

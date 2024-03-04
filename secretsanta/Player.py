@@ -1,5 +1,7 @@
 
-import Gift as Gift;
+
+from secretsanta import Gift
+
 
 class Player:
     __name:str;

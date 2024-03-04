@@ -1,10 +1,9 @@
 import unittest
+from secretsanta.Gift import Gift
+from secretsanta.Player import Player
+from secretsanta.SecretSanta import SecretSanta
 
-from Player import Player
-from Gift import Gift
-from SecretSanta import SecretSanta
-
-class TestStringMethods(unittest.TestCase):
+class SecretSantaTest(unittest.TestCase):
 
     def test_false_if_person_offer_gift(self):
         loic=Player("loic")
