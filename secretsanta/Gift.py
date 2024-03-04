@@ -1,4 +1,6 @@
-import Player as Player 
+
+
+from secretsanta import Player
 
 
 class Gift:

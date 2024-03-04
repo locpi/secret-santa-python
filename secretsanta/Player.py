@@ -1,5 +1,7 @@
 
-import Gift as Gift;
+
+from secretsanta import Gift
+
 
 class Player:
     __name:str;
@@ -9,6 +11,8 @@ class Player:
 
     def __init__(self,name:str):
         self.__name=name;
+        self.couple=False;
+    
     def get_name(self):
         return self.__name
     
@@ -20,6 +24,7 @@ class Player:
 
     def linkTo(self,player):
         self.__link=player
+        self.couple=True;
 
     def isLinkToAnotherPlayer(self,player):
         if self.__link != None:
